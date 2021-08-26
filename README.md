@@ -1,3 +1,11 @@
+<h1><B>NOTE</B></H2>
+<h2>Folder name should be formed by your name and University roll no in GitHub.</h2>
+<B><p align=justify>Do not forget to write your name University roll no in first page of your sheet and do sign each and every page.
+  <b>Code will be handwritten and must contain output screenshot</b>.</B></P>
+
+
+
+
 Q1 Write a c Program code for Worst Fit Memory management Scheme.
 <b><br>INPUT</b>
 <br><b>Enter the number of blocks: 3
