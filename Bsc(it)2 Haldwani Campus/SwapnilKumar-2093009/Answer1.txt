@@ -1,0 +1,73 @@
+int frag[10], blocks[10], file[10];
+ int m, n, block_number, file_number, temp, top = 0;
+ static int block_arr[10], file_arr[10];
+//Fill the number of blocks
+
+
+ printf("\nEnter the Total Number of Blocks:\t");
+ 
+
+scanf("%d",&block_number);
+
+//Fill the number of filees
+ 
+printf("Enter the Total Number of filees:\t");
+
+ 
+scanf("%d",&file_number);
+
+//Fill the size of the blocks
+
+printf("\nEnter the Size of the Blocks:\n");
+for(m = 0; m < block_number; m++) 
+      {
+
+            printf("Block No.[%d]:\t", m + 1);
+
+
+            scanf("%d", &blocks[m]);
+      }
+//Fill the size of the filees
+
+printf("Enter the Size of the filees:\n");
+      for(m = 0; m < file_number; m++) 
+      {
+
+        printf("file No.[%d]:\t", m + 1);
+
+      scanf("%d", &filees[m]);
+
+      }
+//memory allocation to the filees
+for(m = 0; m < file_number; m++)
+      {
+            for(n = 0; n < file_number; n++) { if(block_arr[n] != 1) { temp = blocks[n] - file[m]; if(temp >= 0)
+                        {
+                              if(top < temp)
+                              {
+                                   file_arr[m] = n;
+                                    top = temp;
+
+                              }
+                        } 
+                  }
+
+
+                  frag[m] = top;
+                  block_arr[file_arr[m]] = 1;
+                  top = 0;
+
+            }   
+      }
+//printing result after memory allocation
+    printf("\nfile Number\tfile Size\tBlock Number\tBlock Size\tFragment");
+      for(m = 0; m < file_number; m++)
+      {
+
+            printf("\n%d\t\t%d\t\t%d\t\t%d\t\t%d", m, file[m], file_arr[m], blocks[file_arr[m]], fragments[m]);
+      }
+
+
+      printf("\n");
+      return 0;
+}
